@@ -1,0 +1,7 @@
+---
+- name: creatin a new user
+  hosts: all
+  become: true
+  tasks:
+  - name: creating lakshmi
+    user: name=lakshmi

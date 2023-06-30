@@ -1,0 +1,8 @@
+---
+- name: ansible playbook to create a vault
+  hosts: all
+  become: true
+  - name: clone a repo
+    git:
+      repo: https://CHRAJKUMAR22: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@github.com/CHRAJKUMAR22/vault.git
+      dest: /home/ansadmin/vault

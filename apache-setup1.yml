@@ -1,0 +1,6 @@
+---
+- name: install the different packages
+  hosts: all
+  become: true
+  roles:
+    - apache-setup

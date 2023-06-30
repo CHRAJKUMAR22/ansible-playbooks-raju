@@ -1,0 +1,13 @@
+---
+- name: install apache2
+  hosts: dbserver
+  become: true
+  tasks:
+  - name: installing httpd
+    apt:
+      name: apache2
+      state: present
+  - name: enabling service
+    service:
+      name: apache2
+      state: started

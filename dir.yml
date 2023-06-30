@@ -1,0 +1,10 @@
+---
+- name: create a directory
+  hosts: all
+  become: true
+  gather_facts: no
+  tasks:
+  - name: create a directory with mkdir command
+    file:
+      path: /home/ansadmin/dir2
+      state: directory

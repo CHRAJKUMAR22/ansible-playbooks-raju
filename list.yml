@@ -1,0 +1,9 @@
+---
+- name: install packages
+  hosts: webserver
+  become: true
+  tasks:
+  - name: install different packages
+    yum:
+      name: ['git','wget','telnet']
+      state: installed

@@ -1,0 +1,9 @@
+---
+- name: installing git on remote server
+  hosts: webserver
+  become: true
+  tasks:
+  - name: install package
+    yum:
+      name: git
+      state: installed

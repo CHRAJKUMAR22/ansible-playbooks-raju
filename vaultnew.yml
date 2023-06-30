@@ -1,0 +1,11 @@
+---
+- name: playbook to create a vault
+  hosts: all
+  become: true
+  vars_files:
+    - password.yml
+  tasks:
+    - name: clone a repo
+      git:
+        repo: https://CHRAJKUMAR22:{{ password }}@github.com/CHRAJKUMAR22/vault.git
+        dest: /home/ansadmin/test-vault  
